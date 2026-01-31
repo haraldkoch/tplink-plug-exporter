@@ -4,10 +4,10 @@ Export TP-Link Smart Plug metrics to grafana dashboard
 
 ## Install
 
-Download from [releases](https://github.com/fffonion/tplink-plug-exporter/releases) or run from docker
+Download from [releases](https://github.com/haraldkoch/tplink-plug-exporter/releases) or run from docker
 
 ```
-docker run -d -p 9233:9233 fffonion/tplink-plug-exporter
+docker run -d -p 9233:9233 ghcr.io/haraldkoch/tplink-plug-exporter
 ```
 
 ### Usage

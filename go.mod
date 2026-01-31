@@ -1,4 +1,4 @@
-module github.com/fffonion/tplink-plug-exporter
+module github.com/haraldkoch/tplink-plug-exporter
 
 go 1.23.0
 
