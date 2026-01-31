@@ -7,7 +7,7 @@ permissions:
   contents: read
 
 jobs:
-  goreleaser:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Generate Token
@@ -36,3 +36,20 @@ jobs:
           args: release --snapshot --clean
         env:
           GITHUB_TOKEN: ${{ steps.app-token.outputs.token }}
+
+  status:
+    if: ${{ !cancelled() }}
+    name: Build Success
+    needs:
+      - build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Any jobs failed?
+        if: ${{ contains(needs.*.result, 'failure') }}
+        run: |-
+          exit 1
+
+      - name: All jobs passed or skipped?
+        if: ${{ !(contains(needs.*.result, 'failure')) }}
+        run: |-
+          echo "All jobs passed or skipped" && echo "${{ toJSON(needs.*.result) }}"
