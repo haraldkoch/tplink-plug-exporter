@@ -3,7 +3,7 @@ module github.com/fffonion/tplink-plug-exporter
 go 1.18
 
 require (
-	github.com/mitchellh/mapstructure v1.1.2
+	github.com/mitchellh/mapstructure v1.5.0
 	github.com/prometheus/client_golang v1.13.0
 	github.com/sirupsen/logrus v1.9.4
 )
