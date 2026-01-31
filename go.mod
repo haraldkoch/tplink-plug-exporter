@@ -5,7 +5,7 @@ go 1.18
 require (
 	github.com/mitchellh/mapstructure v1.1.2
 	github.com/prometheus/client_golang v1.13.0
-	github.com/sirupsen/logrus v1.7.0
+	github.com/sirupsen/logrus v1.9.4
 )
 
 require (
@@ -16,6 +16,6 @@ require (
 	github.com/prometheus/client_model v0.2.0 // indirect
 	github.com/prometheus/common v0.37.0 // indirect
 	github.com/prometheus/procfs v0.8.0 // indirect
-	golang.org/x/sys v0.0.0-20220520151302-bc2c85ada10a // indirect
+	golang.org/x/sys v0.13.0 // indirect
 	google.golang.org/protobuf v1.28.1 // indirect
 )
