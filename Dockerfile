@@ -7,7 +7,7 @@ COPY . /src
 WORKDIR /src
 RUN GOOS=$GOOS GOARCH=$GOARCH CGO_ENABLED=0 go build main.go
 
-FROM alpine:3.24.0
+FROM alpine:3.24.1
 COPY --from=builder /src/main /tplink-plug-exporter
 EXPOSE 9233
 ENTRYPOINT ["/tplink-plug-exporter"]
