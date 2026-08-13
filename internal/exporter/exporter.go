@@ -1,7 +1,7 @@
 package exporter
 
 import (
-	"github.com/haraldkoch/tplink-plug-exporter/kasa"
+	"github.com/haraldkoch/tplink-plug-exporter/internal/kasa"
 	"github.com/prometheus/client_golang/prometheus"
 	log "github.com/sirupsen/logrus"
 )
