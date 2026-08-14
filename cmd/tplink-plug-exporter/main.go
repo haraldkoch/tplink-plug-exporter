@@ -6,7 +6,7 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
-	"github.com/haraldkoch/tplink-plug-exporter/exporter"
+	"github.com/haraldkoch/tplink-plug-exporter/internal/exporter"
 )
 
 func main() {

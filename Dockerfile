@@ -1,13 +1,38 @@
-FROM golang:1.26 as builder
+# syntax=docker/dockerfile:1
 
-ARG GOARCH=amd64
-ARG GOOS=linux
+ARG GO_VERSION
 
-COPY . /src
-WORKDIR /src
-RUN GOOS=$GOOS GOARCH=$GOARCH CGO_ENABLED=0 go build main.go
+# ---- Build ----------------------------------------------------------------
+FROM golang:${GO_VERSION}-alpine AS builder
+ARG TARGETOS
+ARG TARGETARCH
+ARG VERSION=dev
+ARG REVISION=dev
 
-FROM alpine:3.24.1
-COPY --from=builder /src/main /tplink-plug-exporter
+# upx (build stage only) compresses the final binary to shrink the image.
+RUN apk add --no-cache upx
+
+WORKDIR /workspace
+COPY go.mod go.sum ./
+RUN go mod download
+
+# Only the runtime binary is built and shipped; cmd/schema is a dev/CI-only
+# generator (see cmd/schema/main.go), so keep it out of the build context.
+COPY cmd/tplink-plug-exporter/ cmd/tplink-plug-exporter/
+COPY internal/ internal/
+
+RUN CGO_ENABLED=0 GOOS=${TARGETOS:-linux} GOARCH=${TARGETARCH} \
+    go build -trimpath \
+    -ldflags "-s -w -X main.version=${VERSION} -X main.commit=${REVISION}" \
+    -o tplink-plug-exporter ./cmd/tplink-plug-exporter
+
+RUN upx --best --lzma tplink-plug-exporter
+
+# ---- Runtime --------------------------------------------------------------
+# distroless/static:nonroot — the fleet-standard runtime base for our static
+# (CGO_ENABLED=0) Go binaries: it bundles CA certs, /etc/passwd, and a nonroot
+# user (uid/gid 65532), so no files need carrying over and no USER is needed.
+FROM gcr.io/distroless/static:nonroot
+COPY --from=builder /workspace/tplink-plug-exporter /tplink-plug-exporter
 EXPOSE 9233
 ENTRYPOINT ["/tplink-plug-exporter"]

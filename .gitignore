@@ -1,3 +1,29 @@
-tplink-plug-exporter
-# Added by goreleaser init:
+# OS generated files
+.DS_Store*
+.Spotlight-V100
+.Trashes
+._*
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.claude
+.idea
+.private
+.vscode
+
+# Others
+.dev/
+.run/
+bin/
 dist/
+tmp/
+
+# Stray `go build ./cmd/tplink-plug-exporter` output at the repo root
+/tplink-plug-exporter
+
+# Preserve files
+!.gitkeep
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
