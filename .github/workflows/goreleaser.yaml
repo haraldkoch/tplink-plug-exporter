@@ -1,0 +1,68 @@
+---
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+name: GoReleaser
+
+on:
+  workflow_call:
+    inputs:
+      snapshot:
+        description: Build a snapshot instead of publishing a release
+        type: boolean
+        required: true
+    secrets:
+      BOT_CLIENT_ID:
+        required: false
+      BOT_APP_PRIVATE_KEY:
+        required: false
+
+jobs:
+  split:
+    name: Split (${{ matrix.goos }})
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      matrix:
+        goos: [linux, darwin, windows]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Setup Mise
+        uses: jdx/mise-action@7e36c90d9ab29c415a2384db3006f3ec8a8cc654 # v4.2.4
+        with:
+          cache: false
+          experimental: true
+          install_args: --locked
+
+      - name: Install UPX
+        uses: crazy-max/ghaction-upx@c83f378efc804f828e988debb88ed6116feb2368 # v4.0.0
+        with:
+          install-only: true
+
+      # Keyed per GOOS: GOCACHE entries differ per target. cache-poisoning
+      # rationale in .github/zizmor.yml.
+      - name: Cache Go build outputs
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: |
+            ~/.cache/go-build
+            ~/go/pkg/mod
+          key: goreleaser-go-${{ matrix.goos }}-${{ hashFiles('go.sum') }}
+          restore-keys: |
+            goreleaser-go-${{ matrix.goos }}-
+
+      - name: Run GoReleaser
+        uses: goreleaser/goreleaser-action@f06c13b6b1a9625abc9e6e439d9c05a8f2190e94 # v7.2.3
+        with:
+          distribution: goreleaser
+          version: "~> v2"
+          args: release --clean
+        env:
+          # GGOOS filters targets without leaking into hooks (GOOS would).
+          GGOOS: ${{ matrix.goos }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

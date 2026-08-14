@@ -121,8 +121,6 @@ jobs:
       contents: read
     with:
       snapshot: true
-    secrets:
-      GORELEASER_KEY: ${{ secrets.GORELEASER_KEY }}
 
   workflow-lint:
     if: >-
