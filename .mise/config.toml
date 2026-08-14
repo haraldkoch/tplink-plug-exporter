@@ -6,7 +6,7 @@ golangci-lint = "2.12.2"
 lefthook = "2.1.10"
 oxfmt = "0.63.0"
 yq = "4.53.3"
-syft = "1.50.0"
+syft = "1.51.0"
 zizmor = "1.29.0"
 
 [tasks.build]
