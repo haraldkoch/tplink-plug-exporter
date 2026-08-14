@@ -11,8 +11,7 @@ import (
 )
 
 type KasaClient struct {
-	addr  string
-	model string
+	addr string
 }
 
 type KasaClientConfig struct {
@@ -84,7 +83,10 @@ func (c *KasaClient) Request(payload interface{}) ([]byte, error) {
 	}
 	// the tcp server on smart plug can only handle one connection
 	// at a time, make sure we don't wait too long to block others
-	conn.SetWriteDeadline(time.Now().Add(time.Second))
+	if err := conn.SetWriteDeadline(time.Now().Add(time.Second)); err != nil {
+		_ = conn.Close()
+		return nil, err
+	}
 
 	jpayload, err := json.Marshal(payload)
 	if err != nil {
@@ -100,7 +102,10 @@ func (c *KasaClient) Request(payload interface{}) ([]byte, error) {
 		return nil, err
 	}
 
-	conn.SetReadDeadline(time.Now().Add(time.Second))
+	if err := conn.SetReadDeadline(time.Now().Add(time.Second)); err != nil {
+		_ = conn.Close()
+		return nil, err
+	}
 
 	var buf []byte
 	tmp := make([]byte, 1024)
@@ -163,12 +168,16 @@ func (c *KasaClient) RPC(service string, cmd string,
 		return fmt.Errorf("%s: malformed response: %v", errmsgPrefix, outMarshal)
 	}
 	var r RPCResponse
-	mapstructure.Decode(outMarshal[service][cmd], &r)
+	if err := mapstructure.Decode(outMarshal[service][cmd], &r); err != nil {
+		return fmt.Errorf("%s: %v", errmsgPrefix, err)
+	}
 	if r.ErrCode != 0 {
 		return fmt.Errorf("%s: rpc error: %v", errmsgPrefix, outMarshal)
 	}
 
-	mapstructure.Decode(outMarshal[service][cmd], &out)
+	if err := mapstructure.Decode(outMarshal[service][cmd], &out); err != nil {
+		return fmt.Errorf("%s: %v", errmsgPrefix, err)
+	}
 
 	return nil
 
