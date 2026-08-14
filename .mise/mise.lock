@@ -22,47 +22,6 @@ url = "https://github.com/rhysd/actionlint/releases/download/v1.7.12/actionlint_
 url_api = "https://api.github.com/repos/rhysd/actionlint/releases/assets/384924893"
 provenance = "github-attestations"
 
-[[tools."aqua:dadav/helm-schema"]]
-version = "0.23.4"
-backend = "aqua:dadav/helm-schema"
-
-[tools."aqua:dadav/helm-schema"."platforms.linux-arm64"]
-checksum = "sha256:f45e427aef848a1565a1341e3d2468840c64dc1d2c0f3b276982b852d587abe8"
-url = "https://github.com/dadav/helm-schema/releases/download/0.23.4/helm-schema_0.23.4_Linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/dadav/helm-schema/releases/assets/437194950"
-
-[tools."aqua:dadav/helm-schema"."platforms.linux-x64"]
-checksum = "sha256:02d7aeb3b915b431a007402778f338daf77839d563cea62d9b375896028a72c7"
-url = "https://github.com/dadav/helm-schema/releases/download/0.23.4/helm-schema_0.23.4_Linux_x86_64.tar.gz"
-url_api = "https://api.github.com/repos/dadav/helm-schema/releases/assets/437194947"
-
-[tools."aqua:dadav/helm-schema"."platforms.macos-arm64"]
-checksum = "sha256:e0075eab02f304a8d11bf8a94480fa34ec4f2db2460978d656738bf22f1106d4"
-url = "https://github.com/dadav/helm-schema/releases/download/0.23.4/helm-schema_0.23.4_Darwin_arm64.tar.gz"
-url_api = "https://api.github.com/repos/dadav/helm-schema/releases/assets/437194961"
-
-[[tools.cosign]]
-version = "3.1.3"
-backend = "aqua:sigstore/cosign"
-
-[tools.cosign."platforms.linux-arm64"]
-checksum = "sha256:c5d324e091826b0d7a78eb16fef316450b4eb9aaec045611c08ba06f5e73220a"
-url = "https://github.com/sigstore/cosign/releases/download/v3.1.3/cosign-linux-arm64"
-url_api = "https://api.github.com/repos/sigstore/cosign/releases/assets/503286299"
-provenance = "cosign"
-
-[tools.cosign."platforms.linux-x64"]
-checksum = "sha256:4629c757b7618056f8ddd7e2625ae9fdd94c0372a65049520bc7d9df9efc7f71"
-url = "https://github.com/sigstore/cosign/releases/download/v3.1.3/cosign-linux-amd64"
-url_api = "https://api.github.com/repos/sigstore/cosign/releases/assets/503286005"
-provenance = "cosign"
-
-[tools.cosign."platforms.macos-arm64"]
-checksum = "sha256:5cf948c2f4dfe59687bdd0b8523709067383e03982cc543475c8a7dc70e92a76"
-url = "https://github.com/sigstore/cosign/releases/download/v3.1.3/cosign-darwin-arm64"
-url_api = "https://api.github.com/repos/sigstore/cosign/releases/assets/503286205"
-provenance = "cosign"
-
 [[tools.go]]
 version = "1.26.5"
 backend = "core:go"
@@ -105,41 +64,6 @@ url = "https://github.com/golangci/golangci-lint/releases/download/v2.12.2/golan
 url_api = "https://api.github.com/repos/golangci/golangci-lint/releases/assets/413470950"
 provenance = "github-attestations"
 
-[[tools.helm]]
-version = "4.2.3"
-backend = "aqua:helm/helm"
-
-[tools.helm."platforms.linux-arm64"]
-checksum = "sha256:21abd9354d39b2cd79a8d76be6912cd137a983cbf997193503fb8a6a6e2f2785"
-url = "https://get.helm.sh/helm-v4.2.3-linux-arm64.tar.gz"
-
-[tools.helm."platforms.linux-x64"]
-checksum = "sha256:e9b88b4ee95b18c706839c28d3a0220e5bc470e9cd9262410c90793c45ff8b7c"
-url = "https://get.helm.sh/helm-v4.2.3-linux-amd64.tar.gz"
-
-[tools.helm."platforms.macos-arm64"]
-checksum = "sha256:048ecf5ad3160f83d918f9fe945238d2132b079640f7b106175331c25f242c64"
-url = "https://get.helm.sh/helm-v4.2.3-darwin-arm64.tar.gz"
-
-[[tools.helm-docs]]
-version = "1.14.2"
-backend = "aqua:norwoodj/helm-docs"
-
-[tools.helm-docs."platforms.linux-arm64"]
-checksum = "sha256:c3787212332386dcd122debef7848feb165aa701467ae3e3442df7638f3ac4e4"
-url = "https://github.com/norwoodj/helm-docs/releases/download/v1.14.2/helm-docs_1.14.2_Linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/norwoodj/helm-docs/releases/assets/178327216"
-
-[tools.helm-docs."platforms.linux-x64"]
-checksum = "sha256:a8cf72ada34fad93285ba2a452b38bdc5bd52cc9a571236244ec31022928d6cc"
-url = "https://github.com/norwoodj/helm-docs/releases/download/v1.14.2/helm-docs_1.14.2_Linux_x86_64.tar.gz"
-url_api = "https://api.github.com/repos/norwoodj/helm-docs/releases/assets/178327210"
-
-[tools.helm-docs."platforms.macos-arm64"]
-checksum = "sha256:2d8399db5b33d240d5f8985241bcf5483563150b968e3229823822979f3e4b8b"
-url = "https://github.com/norwoodj/helm-docs/releases/download/v1.14.2/helm-docs_1.14.2_Darwin_arm64.tar.gz"
-url_api = "https://api.github.com/repos/norwoodj/helm-docs/releases/assets/178327215"
-
 [[tools.lefthook]]
 version = "2.1.10"
 backend = "aqua:evilmartians/lefthook"
@@ -165,6 +89,25 @@ provenance = "github-attestations"
 [[tools.oxfmt]]
 version = "0.63.0"
 backend = "npm:oxfmt"
+
+[[tools.syft]]
+version = "1.50.0"
+backend = "aqua:anchore/syft"
+
+[tools.syft."platforms.linux-arm64"]
+checksum = "sha256:887c57cbcc2d0e8c5c110a4571a3fc7150058b24d74f993ee4663516e5c8ce86"
+url = "https://github.com/anchore/syft/releases/download/v1.50.0/syft_1.50.0_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/anchore/syft/releases/assets/493004622"
+
+[tools.syft."platforms.linux-x64"]
+checksum = "sha256:bf7b29ff57f06da30918266a0e1c2885a8f99784798d1bdb1628886aa015d788"
+url = "https://github.com/anchore/syft/releases/download/v1.50.0/syft_1.50.0_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/anchore/syft/releases/assets/493004612"
+
+[tools.syft."platforms.macos-arm64"]
+checksum = "sha256:e32fdb9d47823fa633748a1efca2528fd77c37469ea93c9e40ab835da44e4cce"
+url = "https://github.com/anchore/syft/releases/download/v1.50.0/syft_1.50.0_darwin_arm64.tar.gz"
+url_api = "https://api.github.com/repos/anchore/syft/releases/assets/493004615"
 
 [[tools.yq]]
 version = "4.53.3"

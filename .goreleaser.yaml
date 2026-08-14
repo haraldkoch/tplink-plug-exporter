@@ -17,14 +17,9 @@ builds:
       - -s -w -X main.version={{.Version}} -X main.commit={{.Commit}}
     goos:
       - linux
-      - windows
-      - darwin
     goarch:
       - amd64
       - arm64
-    ignore:
-      - goos: windows
-        goarch: arm64
     main: ./cmd/tplink-plug-exporter
     binary: tplink-plug-exporter
 
@@ -50,17 +45,6 @@ sboms:
   - artifacts: archive
     documents:
       - "{{ .ArtifactName }}.sbom.json"
-
-signs:
-  - cmd: cosign
-    signature: ${artifact}.sigstore.json
-    args:
-      - sign-blob
-      - --bundle=${signature}
-      - --yes
-      - ${artifact}
-    artifacts: all
-    output: true
 
 # release-please creates the GitHub Release with the changelog; goreleaser
 # attaches binaries/sboms/sigs to it.
