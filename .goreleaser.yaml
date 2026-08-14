@@ -46,17 +46,6 @@ sboms:
     documents:
       - "{{ .ArtifactName }}.sbom.json"
 
-signs:
-  - cmd: cosign
-    signature: ${artifact}.sigstore.json
-    args:
-      - sign-blob
-      - --bundle=${signature}
-      - --yes
-      - ${artifact}
-    artifacts: all
-    output: true
-
 # release-please creates the GitHub Release with the changelog; goreleaser
 # attaches binaries/sboms/sigs to it.
 release:
