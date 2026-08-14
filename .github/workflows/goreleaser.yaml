@@ -16,15 +16,11 @@ on:
         required: false
 
 jobs:
-  split:
-    name: Split (${{ matrix.goos }})
+  build:
+    name: Build
     runs-on: ubuntu-24.04
     permissions:
       contents: read
-    strategy:
-      fail-fast: false
-      matrix:
-        goos: [linux, darwin, windows]
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -52,9 +48,9 @@ jobs:
           path: |
             ~/.cache/go-build
             ~/go/pkg/mod
-          key: goreleaser-go-${{ matrix.goos }}-${{ hashFiles('go.sum') }}
+          key: goreleaser-go-${{ hashFiles('go.sum') }}
           restore-keys: |
-            goreleaser-go-${{ matrix.goos }}-
+            goreleaser-go-
 
       - name: Run GoReleaser
         uses: goreleaser/goreleaser-action@f06c13b6b1a9625abc9e6e439d9c05a8f2190e94 # v7.2.3
@@ -63,6 +59,4 @@ jobs:
           version: "~> v2"
           args: release --clean
         env:
-          # GGOOS filters targets without leaking into hooks (GOOS would).
-          GGOOS: ${{ matrix.goos }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
