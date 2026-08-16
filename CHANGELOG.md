@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.1](https://github.com/haraldkoch/tplink-plug-exporter/compare/0.6.0...0.6.1) (2026-08-16)
+
+
+### Continuous Integration
+
+* **github-action:** update action jdx/mise-action (v4.2.4 ➔ v4.2.5) ([#81](https://github.com/haraldkoch/tplink-plug-exporter/issues/81)) ([aec8dcd](https://github.com/haraldkoch/tplink-plug-exporter/commit/aec8dcd37f8dc1a137a359021877234c909be2b7))
+
 ## [0.6.0](https://github.com/haraldkoch/tplink-plug-exporter/compare/0.5.2...0.6.0) (2026-08-14)
 
 
