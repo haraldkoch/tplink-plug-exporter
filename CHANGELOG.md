@@ -1,5 +1,27 @@
 # Changelog
 
+## [0.7.0](https://github.com/haraldkoch/tplink-plug-exporter/compare/0.6.1...0.7.0) (2026-08-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* **mise:** Update tool oxfmt (0.63.0 ➔ 0.64.0) ([#83](https://github.com/haraldkoch/tplink-plug-exporter/issues/83))
+
+### Features
+
+* **mise:** Update tool oxfmt (0.63.0 ➔ 0.64.0) ([#83](https://github.com/haraldkoch/tplink-plug-exporter/issues/83)) ([411f24c](https://github.com/haraldkoch/tplink-plug-exporter/commit/411f24c2987e4d888e70c91ace36cb962b148c2c))
+
+
+### Bug Fixes
+
+* **deps:** update module github.com/sirupsen/logrus (v1.10.0 ➔ v1.10.1) ([#85](https://github.com/haraldkoch/tplink-plug-exporter/issues/85)) ([b1a3e49](https://github.com/haraldkoch/tplink-plug-exporter/commit/b1a3e493f74a170f0db8bff5f8fd4996d2d7bb83))
+
+
+### Miscellaneous Chores
+
+* **mise:** update tool go (1.26.6 ➔ 1.26.7) ([#86](https://github.com/haraldkoch/tplink-plug-exporter/issues/86)) ([c04e4d7](https://github.com/haraldkoch/tplink-plug-exporter/commit/c04e4d738c5574d39173d9420ac6afe63e3c22a7))
+* **mise:** update tool yq (4.53.3 ➔ 4.53.4) ([#84](https://github.com/haraldkoch/tplink-plug-exporter/issues/84)) ([7112b56](https://github.com/haraldkoch/tplink-plug-exporter/commit/7112b5697ce0a8b6dc9e5bc0977093bf7de349d1))
+
 ## [0.6.1](https://github.com/haraldkoch/tplink-plug-exporter/compare/0.6.0...0.6.1) (2026-08-16)
 
 
