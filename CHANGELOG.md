@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.7.1](https://github.com/haraldkoch/tplink-plug-exporter/compare/0.7.0...0.7.1) (2026-08-20)
+
+
+### Miscellaneous Chores
+
+* **mise:** update tool golangci-lint (2.12.2 ➔ 2.13.0) ([#89](https://github.com/haraldkoch/tplink-plug-exporter/issues/89)) ([18012ed](https://github.com/haraldkoch/tplink-plug-exporter/commit/18012edfd72661022089116c8ec82b9824a3c548))
+* **mise:** update tool yq (4.53.4 ➔ 4.53.6) ([#90](https://github.com/haraldkoch/tplink-plug-exporter/issues/90)) ([eeb0669](https://github.com/haraldkoch/tplink-plug-exporter/commit/eeb06697f067499a8559bb8c99722dfcaf81070c))
+
 ## [0.7.0](https://github.com/haraldkoch/tplink-plug-exporter/compare/0.6.1...0.7.0) (2026-08-19)
 
 
