@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.2](https://github.com/haraldkoch/tplink-plug-exporter/compare/0.7.1...0.7.2) (2026-08-20)
+
+
+### Miscellaneous Chores
+
+* **release:** 0.7.1 ([#92](https://github.com/haraldkoch/tplink-plug-exporter/issues/92)) ([b981702](https://github.com/haraldkoch/tplink-plug-exporter/commit/b981702da795762241c08b7cf992d5dd1cfad4c7))
+
 ## [0.7.1](https://github.com/haraldkoch/tplink-plug-exporter/compare/0.7.0...0.7.1) (2026-08-20)
 
 
