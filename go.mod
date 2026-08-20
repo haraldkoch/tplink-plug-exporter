@@ -1,6 +1,6 @@
 module github.com/haraldkoch/tplink-plug-exporter
 
-go 1.26.6
+go 1.27.0
 
 require (
 	github.com/mitchellh/mapstructure v1.5.0
