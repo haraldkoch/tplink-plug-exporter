@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.9.0](https://github.com/haraldkoch/tplink-plug-exporter/compare/0.8.0...0.9.0) (2026-09-09)
+
+
+### ⚠ BREAKING CHANGES
+
+* **mise:** Update tool oxfmt (0.66.0 ➔ 0.67.0) ([#109](https://github.com/haraldkoch/tplink-plug-exporter/issues/109))
+
+### Features
+
+* **mise:** Update tool oxfmt (0.66.0 ➔ 0.67.0) ([#109](https://github.com/haraldkoch/tplink-plug-exporter/issues/109)) ([4f0eaf1](https://github.com/haraldkoch/tplink-plug-exporter/commit/4f0eaf147fc488ab1b7665eb2032e773148a886e))
+
+
+### Miscellaneous Chores
+
+* **mise:** update tool go:golang.org/x/vuln/cmd/govulncheck (1.7.0 ➔ v1.8.0) ([#111](https://github.com/haraldkoch/tplink-plug-exporter/issues/111)) ([3243747](https://github.com/haraldkoch/tplink-plug-exporter/commit/3243747feb751eff9937a3400bf28ce567c1778f))
+
 ## [0.8.0](https://github.com/haraldkoch/tplink-plug-exporter/compare/0.7.1...0.8.0) (2026-09-01)
 
 
