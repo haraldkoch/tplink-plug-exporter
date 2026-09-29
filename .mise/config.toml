@@ -5,7 +5,7 @@ golangci-lint = "2.14.0"
 "go:golang.org/x/vuln/cmd/govulncheck" = "v1.8.0"
 lefthook = "2.1.14"
 oxfmt = "0.70.0"
-yq = "4.53.6"
+yq = "4.54.1"
 syft = "1.52.0"
 zizmor = "1.30.1"
 
