@@ -1,5 +1,46 @@
 # Changelog
 
+## [0.9.0](https://github.com/haraldkoch/tplink-plug-exporter/compare/0.8.0...0.9.0) (2026-10-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* **mise:** Update tool oxfmt (0.70.0 ➔ 0.71.0) ([#119](https://github.com/haraldkoch/tplink-plug-exporter/issues/119))
+* **github-action:** Update action jdx/mise-action (v4.3.0 ➔ v5.0.0) ([#120](https://github.com/haraldkoch/tplink-plug-exporter/issues/120))
+* **github-action:** Update action ubuntu (24.04 ➔ 26.04) ([#116](https://github.com/haraldkoch/tplink-plug-exporter/issues/116))
+* **mise:** Update tool oxfmt (0.68.0 ➔ 0.70.0) ([#117](https://github.com/haraldkoch/tplink-plug-exporter/issues/117))
+* **mise:** Update tool oxfmt (0.67.0 ➔ 0.68.0) ([#114](https://github.com/haraldkoch/tplink-plug-exporter/issues/114))
+* **mise:** Update tool oxfmt (0.66.0 ➔ 0.67.0) ([#109](https://github.com/haraldkoch/tplink-plug-exporter/issues/109))
+
+### Features
+
+* **mise:** Update tool oxfmt (0.66.0 ➔ 0.67.0) ([#109](https://github.com/haraldkoch/tplink-plug-exporter/issues/109)) ([4f0eaf1](https://github.com/haraldkoch/tplink-plug-exporter/commit/4f0eaf147fc488ab1b7665eb2032e773148a886e))
+* **mise:** Update tool oxfmt (0.67.0 ➔ 0.68.0) ([#114](https://github.com/haraldkoch/tplink-plug-exporter/issues/114)) ([83bcd95](https://github.com/haraldkoch/tplink-plug-exporter/commit/83bcd954736cf20b35fb1c5fda7e0d89620068fc))
+* **mise:** Update tool oxfmt (0.68.0 ➔ 0.70.0) ([#117](https://github.com/haraldkoch/tplink-plug-exporter/issues/117)) ([2725770](https://github.com/haraldkoch/tplink-plug-exporter/commit/2725770c5ff296ec62c6f45c24c9ff7f9823a3d9))
+* **mise:** Update tool oxfmt (0.70.0 ➔ 0.71.0) ([#119](https://github.com/haraldkoch/tplink-plug-exporter/issues/119)) ([c7b60df](https://github.com/haraldkoch/tplink-plug-exporter/commit/c7b60df97fd4e4c150ee89abe17aa67d69dbb2d7))
+
+
+### Continuous Integration
+
+* **github-action:** Update action jdx/mise-action (v4.3.0 ➔ v5.0.0) ([#120](https://github.com/haraldkoch/tplink-plug-exporter/issues/120)) ([9ce6fb3](https://github.com/haraldkoch/tplink-plug-exporter/commit/9ce6fb305798250e1264dec11a3096576f82a32d))
+* **github-action:** update action jdx/mise-action (v5.0.0 ➔ v5.0.1) ([#125](https://github.com/haraldkoch/tplink-plug-exporter/issues/125)) ([c835f75](https://github.com/haraldkoch/tplink-plug-exporter/commit/c835f759061264ac7c5594df4bd1107b61b7e2a2))
+* **github-action:** Update action ubuntu (24.04 ➔ 26.04) ([#116](https://github.com/haraldkoch/tplink-plug-exporter/issues/116)) ([481f619](https://github.com/haraldkoch/tplink-plug-exporter/commit/481f61996f55d446dcfd51916d35604a7f5f2c41))
+
+
+### Miscellaneous Chores
+
+* **mise:** update tool go:golang.org/x/vuln/cmd/govulncheck (1.7.0 ➔ v1.8.0) ([#111](https://github.com/haraldkoch/tplink-plug-exporter/issues/111)) ([3243747](https://github.com/haraldkoch/tplink-plug-exporter/commit/3243747feb751eff9937a3400bf28ce567c1778f))
+* **mise:** update tool golangci-lint (2.13.2 ➔ 2.14.0) ([#118](https://github.com/haraldkoch/tplink-plug-exporter/issues/118)) ([50b93c6](https://github.com/haraldkoch/tplink-plug-exporter/commit/50b93c61069b30223892b638d217f0092b730e13))
+* **mise:** update tool lefthook (2.1.12 ➔ 2.1.14) ([#113](https://github.com/haraldkoch/tplink-plug-exporter/issues/113)) ([21c5ab3](https://github.com/haraldkoch/tplink-plug-exporter/commit/21c5ab3faf01546759215d84268d7e66de1cac62))
+* **mise:** update tool lefthook (2.1.14 ➔ 2.1.15) ([#122](https://github.com/haraldkoch/tplink-plug-exporter/issues/122)) ([e2737cc](https://github.com/haraldkoch/tplink-plug-exporter/commit/e2737ccf1466f34e29f3285ff985192e657403bf))
+* **mise:** update tool lefthook (2.1.15 ➔ 2.1.16) ([#123](https://github.com/haraldkoch/tplink-plug-exporter/issues/123)) ([8a0681f](https://github.com/haraldkoch/tplink-plug-exporter/commit/8a0681f7a66955145de8578d9b87f2978aac5166))
+* **mise:** update tool syft (1.51.1 ➔ 1.52.0) ([#115](https://github.com/haraldkoch/tplink-plug-exporter/issues/115)) ([8aa1bc2](https://github.com/haraldkoch/tplink-plug-exporter/commit/8aa1bc24d4377c4d8f46097667f441a6d1211b46))
+* **mise:** update tool syft (1.52.0 ➔ 1.54.0) ([#124](https://github.com/haraldkoch/tplink-plug-exporter/issues/124)) ([4a601ec](https://github.com/haraldkoch/tplink-plug-exporter/commit/4a601ec8ef4bb01b44213bd83b4f690617831dbc))
+* **mise:** update tool yq (4.53.6 ➔ 4.54.1) ([#121](https://github.com/haraldkoch/tplink-plug-exporter/issues/121)) ([cf46b1b](https://github.com/haraldkoch/tplink-plug-exporter/commit/cf46b1b7253cdcf100f40b1723a46cc87afd0e92))
+* **mise:** update tool zizmor (1.30.0 ➔ 1.30.1) ([#112](https://github.com/haraldkoch/tplink-plug-exporter/issues/112)) ([b7edfba](https://github.com/haraldkoch/tplink-plug-exporter/commit/b7edfbacdbff26c7c205f2a973adf1dec97d2ae0))
+* **mise:** update tool zizmor (1.30.0 ➔ 1.30.1) ([#112](https://github.com/haraldkoch/tplink-plug-exporter/issues/112)) ([62baeda](https://github.com/haraldkoch/tplink-plug-exporter/commit/62baeda1d18c8318ff7f7b30b7b28b495b90a825))
+* work around actionlint error ([815f68b](https://github.com/haraldkoch/tplink-plug-exporter/commit/815f68b00185b3949397e35d1a75846d13d27c11))
+
 ## [0.8.0](https://github.com/haraldkoch/tplink-plug-exporter/compare/0.7.1...0.8.0) (2026-09-01)
 
 
