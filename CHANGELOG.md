@@ -1,5 +1,39 @@
 # Changelog
 
+## [0.10.0](https://github.com/haraldkoch/tplink-plug-exporter/compare/0.9.0...0.10.0) (2026-10-21)
+
+
+### ⚠ BREAKING CHANGES
+
+* **mise:** Update tool oxfmt (0.73.0 ➔ 0.74.0) ([#149](https://github.com/haraldkoch/tplink-plug-exporter/issues/149))
+* **mise:** Update tool oxfmt (0.72.0 ➔ 0.73.0) ([#140](https://github.com/haraldkoch/tplink-plug-exporter/issues/140))
+
+### Features
+
+* **mise:** Update tool oxfmt (0.72.0 ➔ 0.73.0) ([#140](https://github.com/haraldkoch/tplink-plug-exporter/issues/140)) ([379dc2c](https://github.com/haraldkoch/tplink-plug-exporter/commit/379dc2cf00e8a390d5341eb5d0ab56809a78a404))
+* **mise:** Update tool oxfmt (0.73.0 ➔ 0.74.0) ([#149](https://github.com/haraldkoch/tplink-plug-exporter/issues/149)) ([80e5bf9](https://github.com/haraldkoch/tplink-plug-exporter/commit/80e5bf912e2382293ad83fc3456169e676aec965))
+
+
+### Continuous Integration
+
+* **github-action:** update action actions/create-github-app-token (v3.2.0 ➔ v3.3.0) ([#138](https://github.com/haraldkoch/tplink-plug-exporter/issues/138)) ([8a177e3](https://github.com/haraldkoch/tplink-plug-exporter/commit/8a177e34bcd9a7a26a4e195a5572033f5a2ef788))
+* **github-action:** update action docker/github-builder (v1.17.0 ➔ v1.18.0) ([#147](https://github.com/haraldkoch/tplink-plug-exporter/issues/147)) ([76b22fa](https://github.com/haraldkoch/tplink-plug-exporter/commit/76b22fac56207f9e987dfc2901dd21dd87abf06b))
+* **github-action:** update action goreleaser/goreleaser-action (v7.2.3 ➔ v7.3.0) ([#143](https://github.com/haraldkoch/tplink-plug-exporter/issues/143)) ([13640fb](https://github.com/haraldkoch/tplink-plug-exporter/commit/13640fb9dfee7ffe9f9a3a8f04babc4a0d0fd9ba))
+* **github-action:** update action jdx/mise-action (v5.1.1 ➔ v5.1.2) ([#142](https://github.com/haraldkoch/tplink-plug-exporter/issues/142)) ([5d38125](https://github.com/haraldkoch/tplink-plug-exporter/commit/5d38125fae3bea437b5d03b58b2d56f63f5615de))
+* **github-action:** update action jdx/mise-action (v5.1.2 ➔ v5.2.0) ([#146](https://github.com/haraldkoch/tplink-plug-exporter/issues/146)) ([6c491c7](https://github.com/haraldkoch/tplink-plug-exporter/commit/6c491c74095bc939e9b3b88987855ebfd6ae8b34))
+
+
+### Miscellaneous Chores
+
+* **mise:** lock file maintenance tool ([#137](https://github.com/haraldkoch/tplink-plug-exporter/issues/137)) ([fe009ce](https://github.com/haraldkoch/tplink-plug-exporter/commit/fe009ce0cb061950a6250eaa100f96e08fd8a371))
+* **mise:** update tool go (1.27.2 ➔ 1.27.3) ([#150](https://github.com/haraldkoch/tplink-plug-exporter/issues/150)) ([5dae69c](https://github.com/haraldkoch/tplink-plug-exporter/commit/5dae69c7ec52a05e6ca8ebe9dce954d62806dc4d))
+* **mise:** update tool go:golang.org/x/vuln/cmd/govulncheck (1.8.0 ➔ v1.9.0) ([#135](https://github.com/haraldkoch/tplink-plug-exporter/issues/135)) ([6dd4d6f](https://github.com/haraldkoch/tplink-plug-exporter/commit/6dd4d6fdd40fe491c9355b54db5cf61e8626523d))
+* **mise:** update tool golangci-lint (2.14.0 ➔ 2.15.0) ([#145](https://github.com/haraldkoch/tplink-plug-exporter/issues/145)) ([0b1f5b7](https://github.com/haraldkoch/tplink-plug-exporter/commit/0b1f5b738d4e6203b8fff1033ee3162375f0faa2))
+* **mise:** update tool lefthook (2.2.1 ➔ 2.2.2) ([#139](https://github.com/haraldkoch/tplink-plug-exporter/issues/139)) ([374b7a0](https://github.com/haraldkoch/tplink-plug-exporter/commit/374b7a008bc8d767665d8b088831b093d353747e))
+* **mise:** update tool syft (1.54.1 ➔ 1.55.0) ([#148](https://github.com/haraldkoch/tplink-plug-exporter/issues/148)) ([14aefbf](https://github.com/haraldkoch/tplink-plug-exporter/commit/14aefbfc130641662a4b50521c8e19627fd1a6e5))
+* **mise:** update tool zizmor (1.30.1 ➔ 1.31.0) ([#141](https://github.com/haraldkoch/tplink-plug-exporter/issues/141)) ([678269b](https://github.com/haraldkoch/tplink-plug-exporter/commit/678269b7a2a5dbe0638fe03c8de4efbef3c0676f))
+* **mise:** update tool zizmor (1.31.0 ➔ 1.31.1) ([#144](https://github.com/haraldkoch/tplink-plug-exporter/issues/144)) ([fef3352](https://github.com/haraldkoch/tplink-plug-exporter/commit/fef335244e50139b583e706bd6a3d30de01b670b))
+
 ## [0.9.0](https://github.com/haraldkoch/tplink-plug-exporter/compare/0.8.0...0.9.0) (2026-10-08)
 
 
