@@ -91,25 +91,25 @@ version = "0.75.0"
 backend = "npm:oxfmt"
 
 [[tools.syft]]
-version = "1.56.0"
+version = "1.57.0"
 backend = "aqua:anchore/syft"
 
 [tools.syft."platforms.linux-arm64"]
-checksum = "sha256:ace61b9397ae28189c674ae332d67a8074dafd71e87724dfb8b22412d8253bb5"
-url = "https://github.com/anchore/syft/releases/download/v1.56.0/syft_1.56.0_linux_arm64.tar.gz"
-url_api = "https://api.github.com/repos/anchore/syft/releases/assets/702477588"
+checksum = "sha256:410cbfa0ae0f63246bc0057843760b1de2833cd23919e025e368fd7681308cdb"
+url = "https://github.com/anchore/syft/releases/download/v1.57.0/syft_1.57.0_linux_arm64.tar.gz"
+url_api = "https://api.github.com/repos/anchore/syft/releases/assets/714762067"
 provenance = "cosign"
 
 [tools.syft."platforms.linux-x64"]
-checksum = "sha256:1c2493cfcf52d3367d6cb25780d9190c111c2219c34c820574c43e8bae15c528"
-url = "https://github.com/anchore/syft/releases/download/v1.56.0/syft_1.56.0_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/anchore/syft/releases/assets/702477601"
+checksum = "sha256:9c077a7d43029b3b13e98a8db720661e700c4d58db6352153a06395ae4a2a704"
+url = "https://github.com/anchore/syft/releases/download/v1.57.0/syft_1.57.0_linux_amd64.tar.gz"
+url_api = "https://api.github.com/repos/anchore/syft/releases/assets/714762081"
 provenance = "cosign"
 
 [tools.syft."platforms.macos-arm64"]
-checksum = "sha256:c19b97a8c175ac7bd8105b8c8240ce740bf078333b12cc62ea49002c1b33e6e0"
-url = "https://github.com/anchore/syft/releases/download/v1.56.0/syft_1.56.0_darwin_arm64.tar.gz"
-url_api = "https://api.github.com/repos/anchore/syft/releases/assets/702477605"
+checksum = "sha256:17012a5a110323bb1069e513a8665f1ae445905c56b4e3f9a9df4f95c5bb6161"
+url = "https://github.com/anchore/syft/releases/download/v1.57.0/syft_1.57.0_darwin_arm64.tar.gz"
+url_api = "https://api.github.com/repos/anchore/syft/releases/assets/714762057"
 provenance = "cosign"
 
 [[tools.yq]]
